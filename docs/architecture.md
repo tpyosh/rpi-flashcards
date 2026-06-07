@@ -2,9 +2,10 @@
 
 ## Goals
 
-- keep the terminal PoC runnable at every phase
-- make Raspberry Pi migration a packaging problem, not a rewrite
-- isolate display-driver uncertainty behind a stable rendering interface
+- keep the terminal dictionary display runnable at every phase
+- make Raspberry Pi migration a packaging and environment problem, not a rewrite
+- isolate e-paper driver uncertainty behind a stable display interface
+- keep quiz, rating, reveal, and progress-tracking behavior out of the first display path
 
 ## Layering
 
@@ -19,36 +20,49 @@ data is independent from ui_terminal
 
 ### `src/rpi_flashcards/core`
 
-Contains the study deck model, review history, and session mechanics such as reveal, next, and rating.
+Owns display-session logic that does not depend on terminal or hardware details. For the first
+target flow, this should mean choosing the next English/Japanese word pair from a dictionary asset,
+with deterministic random behavior available for tests.
 
 ### `src/rpi_flashcards/data`
 
-Contains raw-file ingestion, normalized entry validation, deterministic deck generation, and JSON-based state persistence.
+Owns raw-file ingestion, normalized English/Japanese dictionary validation, and generation of
+runtime dictionary assets. It should not know whether the target renderer is terminal or e-paper.
 
 ### `src/rpi_flashcards/ui_terminal`
 
-Contains the current terminal interaction loop. It depends on `core` and `data`, but it knows nothing about GPIO or SPI.
+Owns the terminal timer display. It should load the dictionary through `data`, ask `core` for the
+next item, print one English word and one Japanese translation, wait for the configured interval,
+and repeat until the user quits.
 
 ### `src/rpi_flashcards/display`
 
-Contains frame preparation and PNG preview rendering. The current rendering path validates layout decisions before any hardware adapter is added.
+Owns frame preparation and PNG preview rendering. The first e-paper-facing work should happen here
+without changing dictionary data or random-selection logic.
 
 ### `src/rpi_flashcards/platform`
 
-Reserved for Raspberry Pi-specific glue such as panel-driver selection, SPI setup, and later GPIO button wiring.
+Reserved for Raspberry Pi-specific glue such as setup notes, panel-driver selection, SPI setup,
+and later GPIO button wiring.
 
-## Current Runtime Flow
+## Target Runtime Flow
 
-1. load a generated deck from `data/decks/`
-2. create a `FlashcardSession`
-3. run terminal commands for reveal / next / rating
-4. persist review events to `state/`
-5. optionally render a prepared card frame to PNG
+1. load a generated dictionary asset from `data/`
+2. create a display session with a random source
+3. terminal UI requests and prints the next English/Japanese pair
+4. wait for the configured timer interval
+5. repeat until `q` or Ctrl-C
+6. later, render the same pair through `display` for e-paper output
+
+## Current Implementation Note
+
+The repository still contains an initial flashcard-style session with reveal, next, rating, and
+progress concepts. The next implementation pass should replace the active terminal path with the
+timer-based dictionary display described here.
 
 ## Why This Shape
 
-- `core` remains reusable for both terminal and e-paper modes
-- `data` can evolve into a larger pipeline without changing runtime UI
-- `display` can target PNG preview now and e-paper hardware later
+- `core` remains reusable for terminal and e-paper display modes
+- `data` can evolve from sample entries to a real dictionary without changing UI code
+- `display` can validate layout with PNG output before using a physical panel
 - `platform` stays thin and avoids contaminating the application model
-

@@ -29,8 +29,8 @@ The repository therefore avoids binding application logic to a concrete driver n
 ## Bring-up Order
 
 1. run the terminal app on Raspberry Pi without display code
-2. confirm packaged deck files and state persistence on-device
-3. render PNG previews locally from the same card data
+2. confirm packaged dictionary assets and timer behavior on-device
+3. render PNG previews locally from the same dictionary data
 4. wire one concrete e-paper driver after confirming panel identity
 5. keep terminal fallback during hardware debugging
 
@@ -39,4 +39,3 @@ The repository therefore avoids binding application logic to a concrete driver n
 - e-paper refresh is slow, so updates should be explicit and infrequent
 - full refresh is acceptable first; partial refresh optimization should wait
 - ghosting behavior should be handled in the adapter, not in `core`
-
