@@ -1,0 +1,140 @@
+{
+  "deck_id": "poc-core-8",
+  "title": "Terminal PoC Deck",
+  "description": "Small deterministic deck for terminal-first validation on macOS before Raspberry Pi migration.",
+  "cards": [
+    {
+      "card_id": "seed-002-card-1",
+      "entry_id": "seed-002",
+      "lemma": "careful",
+      "part_of_speech": "adjective",
+      "definition": "taking time to avoid mistakes or danger",
+      "example": "Be careful when you open the box.",
+      "difficulty": "A1",
+      "frequency_per_million": 18.5,
+      "tags": [
+        "poc",
+        "daily"
+      ]
+    },
+    {
+      "card_id": "seed-004-card-2",
+      "entry_id": "seed-004",
+      "lemma": "gather",
+      "part_of_speech": "verb",
+      "definition": "to bring people or things together",
+      "example": "We gather ideas in a shared notebook.",
+      "difficulty": "A2",
+      "frequency_per_million": 15.7,
+      "tags": [
+        "poc",
+        "action"
+      ]
+    },
+    {
+      "card_id": "seed-012-card-3",
+      "entry_id": "seed-012",
+      "lemma": "repair",
+      "part_of_speech": "verb",
+      "definition": "to fix something that is broken or damaged",
+      "example": "They repair old radios as a hobby.",
+      "difficulty": "A2",
+      "frequency_per_million": 14.2,
+      "tags": [
+        "poc",
+        "action"
+      ]
+    },
+    {
+      "card_id": "seed-011-card-4",
+      "entry_id": "seed-011",
+      "lemma": "rare",
+      "part_of_speech": "adjective",
+      "definition": "not common and not easy to find",
+      "example": "It is rare to see snow here in April.",
+      "difficulty": "B1",
+      "frequency_per_million": 13.1,
+      "tags": [
+        "poc",
+        "frequency"
+      ]
+    },
+    {
+      "card_id": "seed-003-card-5",
+      "entry_id": "seed-003",
+      "lemma": "brief",
+      "part_of_speech": "adjective",
+      "definition": "lasting only a short time",
+      "example": "We had a brief meeting before lunch.",
+      "difficulty": "A2",
+      "frequency_per_million": 12.4,
+      "tags": [
+        "poc",
+        "time"
+      ]
+    },
+    {
+      "card_id": "seed-008-card-6",
+      "entry_id": "seed-008",
+      "lemma": "curious",
+      "part_of_speech": "adjective",
+      "definition": "wanting to learn or know more about something",
+      "example": "A curious reader asks many questions.",
+      "difficulty": "A2",
+      "frequency_per_million": 11.8,
+      "tags": [
+        "poc",
+        "mindset"
+      ]
+    },
+    {
+      "card_id": "seed-007-card-7",
+      "entry_id": "seed-007",
+      "lemma": "steady",
+      "part_of_speech": "adjective",
+      "definition": "regular and not changing suddenly",
+      "example": "She made steady progress during the week.",
+      "difficulty": "B1",
+      "frequency_per_million": 10.3,
+      "tags": [
+        "poc",
+        "quality"
+      ]
+    },
+    {
+      "card_id": "seed-005-card-8",
+      "entry_id": "seed-005",
+      "lemma": "narrow",
+      "part_of_speech": "adjective",
+      "definition": "small in width",
+      "example": "The path becomes narrow near the bridge.",
+      "difficulty": "A2",
+      "frequency_per_million": 9.1,
+      "tags": [
+        "poc",
+        "shape"
+      ]
+    }
+  ],
+  "metadata": {
+    "selection": {
+      "target_count": 8,
+      "allowed_parts_of_speech": [
+        "noun",
+        "verb",
+        "adjective"
+      ],
+      "difficulty_buckets": [
+        "A1",
+        "A2",
+        "B1"
+      ],
+      "min_frequency_per_million": 6.0,
+      "max_frequency_per_million": 20.0,
+      "required_tags": [
+        "poc"
+      ],
+      "include_examples": true
+    }
+  }
+}

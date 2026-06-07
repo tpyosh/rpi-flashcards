@@ -1,0 +1,123 @@
+[
+  {
+    "source_id": "seed-001",
+    "word": "adapt",
+    "pos": "verb",
+    "gloss": "to change to fit a new purpose or situation",
+    "example": "Plants adapt to dry climates over time.",
+    "difficulty": "A2",
+    "frequency_per_million": 7.8,
+    "tags": ["poc", "change"]
+  },
+  {
+    "source_id": "seed-002",
+    "word": "careful",
+    "pos": "adjective",
+    "gloss": "taking time to avoid mistakes or danger",
+    "example": "Be careful when you open the box.",
+    "difficulty": "A1",
+    "frequency_per_million": 18.5,
+    "tags": ["poc", "daily"]
+  },
+  {
+    "source_id": "seed-003",
+    "word": "brief",
+    "pos": "adjective",
+    "gloss": "lasting only a short time",
+    "example": "We had a brief meeting before lunch.",
+    "difficulty": "A2",
+    "frequency_per_million": 12.4,
+    "tags": ["poc", "time"]
+  },
+  {
+    "source_id": "seed-004",
+    "word": "gather",
+    "pos": "verb",
+    "gloss": "to bring people or things together",
+    "example": "We gather ideas in a shared notebook.",
+    "difficulty": "A2",
+    "frequency_per_million": 15.7,
+    "tags": ["poc", "action"]
+  },
+  {
+    "source_id": "seed-005",
+    "word": "narrow",
+    "pos": "adjective",
+    "gloss": "small in width",
+    "example": "The path becomes narrow near the bridge.",
+    "difficulty": "A2",
+    "frequency_per_million": 9.1,
+    "tags": ["poc", "shape"]
+  },
+  {
+    "source_id": "seed-006",
+    "word": "restore",
+    "pos": "verb",
+    "gloss": "to bring something back to an earlier or better state",
+    "example": "The team worked to restore the old garden.",
+    "difficulty": "B1",
+    "frequency_per_million": 8.2,
+    "tags": ["poc", "action"]
+  },
+  {
+    "source_id": "seed-007",
+    "word": "steady",
+    "pos": "adjective",
+    "gloss": "regular and not changing suddenly",
+    "example": "She made steady progress during the week.",
+    "difficulty": "B1",
+    "frequency_per_million": 10.3,
+    "tags": ["poc", "quality"]
+  },
+  {
+    "source_id": "seed-008",
+    "word": "curious",
+    "pos": "adjective",
+    "gloss": "wanting to learn or know more about something",
+    "example": "A curious reader asks many questions.",
+    "difficulty": "A2",
+    "frequency_per_million": 11.8,
+    "tags": ["poc", "mindset"]
+  },
+  {
+    "source_id": "seed-009",
+    "word": "vanish",
+    "pos": "verb",
+    "gloss": "to disappear suddenly or completely",
+    "example": "The clouds vanish after the storm.",
+    "difficulty": "B1",
+    "frequency_per_million": 4.6,
+    "tags": ["poc", "change"]
+  },
+  {
+    "source_id": "seed-010",
+    "word": "harbor",
+    "pos": "noun",
+    "gloss": "a sheltered place where boats can stay safely",
+    "example": "Small boats rested in the harbor.",
+    "difficulty": "B1",
+    "frequency_per_million": 6.4,
+    "tags": ["poc", "place"]
+  },
+  {
+    "source_id": "seed-011",
+    "word": "rare",
+    "pos": "adjective",
+    "gloss": "not common and not easy to find",
+    "example": "It is rare to see snow here in April.",
+    "difficulty": "B1",
+    "frequency_per_million": 13.1,
+    "tags": ["poc", "frequency"]
+  },
+  {
+    "source_id": "seed-012",
+    "word": "repair",
+    "pos": "verb",
+    "gloss": "to fix something that is broken or damaged",
+    "example": "They repair old radios as a hobby.",
+    "difficulty": "A2",
+    "frequency_per_million": 14.2,
+    "tags": ["poc", "action"]
+  }
+]
+

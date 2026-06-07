@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rpi-flashcards"
+version = "0.1.0"
+description = "Terminal-first English flashcards for Raspberry Pi Zero 2 W and SPI e-paper displays."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "Pillow>=10,<12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8,<9",
+  "ruff>=0.4,<1",
+]
+
+[project.scripts]
+rpi-flashcards = "rpi_flashcards.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
+
